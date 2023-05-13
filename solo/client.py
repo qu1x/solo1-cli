@@ -16,7 +16,6 @@ from .devices import solo_v1
 
 
 def find(solo_serial=None, retries=5, raw_device=None, udp=False):
-
     if udp:
         fido2.force_udp_backend()
 

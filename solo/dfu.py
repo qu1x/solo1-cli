@@ -80,7 +80,6 @@ class DFUDevice:
         return addr
 
     def find(self, altsetting=0, ser=None, dev=None):
-
         if dev is not None:
             self.dev = dev
         else:
@@ -245,7 +244,6 @@ class DFUDevice:
             print("Warning: OSError with write_page")
 
     def prepare_options_bytes_detach(self):
-
         # Necessary to prevent future errors...
         m = self.read_mem(0, 16)
         self.write_option_bytes(m)

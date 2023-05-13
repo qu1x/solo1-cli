@@ -32,7 +32,7 @@ from cryptography.hazmat.primitives import hashes
 from fido2.attestation import Attestation
 from fido2.client import ClientError, Fido2Client
 from fido2.ctap import CtapError
-from fido2.ctap1 import Ctap1, ApduError
+from fido2.ctap1 import ApduError, Ctap1
 from fido2.ctap2 import Ctap2
 from fido2.hid import CTAPHID, CtapHidDevice
 from intelhex import IntelHex
@@ -59,7 +59,6 @@ def attempt_to_find_device(p):
 
 
 def attempt_to_boot_bootloader(p):
-
     try:
         p.enter_solo_bootloader()
     except OSError:
@@ -182,7 +181,6 @@ def use_dfu(args):
 
 
 def programmer_main():
-
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "[firmware]",

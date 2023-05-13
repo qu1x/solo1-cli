@@ -3,7 +3,7 @@ import struct
 from cryptography import x509
 from cryptography.hazmat.backends import default_backend
 from fido2.attestation import Attestation
-from fido2.ctap2 import Ctap2, CredentialManagement
+from fido2.ctap2 import CredentialManagement, Ctap2
 from fido2.hid import CTAPHID
 from fido2.utils import hmac_sha256
 from fido2.webauthn import PublicKeyCredentialCreationOptions
